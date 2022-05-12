@@ -51,7 +51,7 @@ int is_valid(Node* n){
   {
     for (size_t j = 0; j < 9; j++)
     {
-      if (n->sudo[i][j] != 0;)
+      if (n->sudo[i][j] != 0)
       {
         vectorNum[n->sudo[i][j]]++;
       }

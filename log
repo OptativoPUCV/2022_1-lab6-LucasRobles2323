@@ -81,3 +81,9 @@ sudoku.c:54:29: error: expected ')' before ';' token
                              ^
 Compilation failed
 6e382e4
+Thu May 12 11:39:05 HSP 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|3
+total_score: 35/70
+be85d3f
