@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int *vectorNum = (int*)calloc(10, sizeof(int));
+  /*int *vectorNum = (int*)calloc(10, sizeof(int));
 
   // Comprobar filas
   for(size_t i = 0; i < 9; i++)
@@ -82,7 +82,7 @@ int is_valid(Node* n){
     vectorNum = (int*)calloc(10, sizeof(int));
   }
 
-  // Comprobar cuadrantes
+  // Comprobar cuadrantes*/
   return 1;
 }
 
