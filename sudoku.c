@@ -44,7 +44,47 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  // Comprobar filas
+  for (size_t i = 0; i < 9; i++)
+  {
+    for (size_t j = 0; j < 9; j++)
+    {
+      if (n->sudo[i][j] != 0)
+      {
+        int num = n->sudo[i][j];
+        size_t index = j;
+        for (size_t k = 0; k < 9; k++)
+        {
+          if (num == n->sudo[i][k] && k != index)
+          {
+            return 0;
+          }
+        }
+      }
+    }
+  }
+  
+  // Comprobar columnas
+  for (size_t i = 0; i < 9; i++)
+  {
+    for (size_t j = 0; j < 9; j++)
+    {
+      if (n->sudo[j][i] != 0)
+      {
+        int num = n->sudo[i][j];
+        size_t index = i;
+        for (size_t k = 0; k < 9; k++)
+        {
+          if (num == n->sudo[k][i] && k != index)
+          {
+            return 0;
+          }
+        }
+      }
+    }
+  }
 
+  // Comprobar cuadrantes
   return 1;
 }
 
