@@ -53,7 +53,7 @@ int is_valid(Node* n){
     {
       if (n->sudo[i][j] != 0;)
       {
-        [vectorNumn->sudo[i][j]]++;
+        vectorNum[n->sudo[i][j]]++;
       }
       if (vectorNum[n->sudo[i][j]] > 1)
       {
