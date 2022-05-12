@@ -63,10 +63,24 @@ int is_valid(Node* n){
     free(vectorNum);
     vectorNum = (int*)calloc(10, sizeof(int));
   }
-
-  
   
   // Comprobar columnas
+  for(size_t i = 0; i < 9; i++)
+  {
+    for (size_t j = 0; j < 9; j++)
+    {
+      if (n->sudo[j][i] != 0)
+      {
+        vectorNum[n->sudo[j][i]]++;
+      }
+      if (vectorNum[n->sudo[j][i]] > 1)
+      {
+        return 0;
+      }
+    }
+    free(vectorNum);
+    vectorNum = (int*)calloc(10, sizeof(int));
+  }
 
   // Comprobar cuadrantes
   return 1;
