@@ -57,6 +57,7 @@ int is_valid(Node* n){
         {
           if (num == n->sudo[i][k] && k != index)
           {
+            printf("k = %d & num = %d o %d", k, num, n->sudo[i][k]);
             return 0;
           }
         }
