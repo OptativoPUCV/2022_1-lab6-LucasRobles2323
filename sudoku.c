@@ -83,27 +83,6 @@ int is_valid(Node* n){
   }
 
   // Comprobar cuadrantes
-  for (size_t l = 0; l < 7; l += 3)
-  {
-    for(size_t k = 0; k < 7; k += 3)
-    {
-      for (size_t i = k; i < k + 3; k++)
-      {
-        for (size_t j = l; j < l + 3; j++)
-        {
-          if(n->sudo[i][j] != 0){
-            vectorNum[n->sudo[i][j]]++;
-          }
-          if (vectorNum[n->sudo[i][j]] > 1)
-          {
-            return 0;
-          }
-        } 
-      }
-      free(vectorNum);
-      vectorNum = (int*)calloc(10, sizeof(int));
-    }
-  }
 
   return 1;
 }
