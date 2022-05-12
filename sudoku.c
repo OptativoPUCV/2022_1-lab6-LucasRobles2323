@@ -53,7 +53,7 @@ int is_valid(Node* n){
     {
       if (n->sudo[i][j] != 0;)
       {
-        vectorNum[n->sudo[i][j]]++;
+        [vectorNumn->sudo[i][j]]++;
       }
       if (vectorNum[n->sudo[i][j]] > 1)
       {
@@ -61,7 +61,7 @@ int is_valid(Node* n){
       }
     }
     free(vectorNum);
-    int *vectorNum = (int*)calloc(10, sizeof(int));
+    vectorNum = (int*)calloc(10, sizeof(int));
   }
 
   
