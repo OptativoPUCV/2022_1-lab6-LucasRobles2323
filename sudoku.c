@@ -132,7 +132,6 @@ int is_final(Node* n){
 
 Node* DFS(Node* initial, int* cont){
   Stack* S = createStack();
-  List* visited = createList();
   push(S,initial);
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);

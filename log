@@ -224,3 +224,9 @@ sudoku.c:135:9: error: unused variable 'visited' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7545d5d
+Thu May 12 20:59:09 HSP 2022: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  8|1
+total_score: 60/70
+8724f11
