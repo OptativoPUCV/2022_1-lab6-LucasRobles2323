@@ -91,8 +91,6 @@ int is_valid(Node* n){
     free(vectorNum);
     vectorNum = (int*)calloc(10, sizeof(int));
   }
-  print_node(n);
-  printf("\n\n");
   return 1;
 }
 
@@ -137,7 +135,7 @@ Node* DFS(Node* initial, int* cont){
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
 
-    if (!is_valid(n) && n->sudo[0][2] == 1)continue;
+    if (!is_valid(n))continue;
     if (is_final(n)) return n;
     
 
@@ -145,7 +143,8 @@ Node* DFS(Node* initial, int* cont){
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
-      push(S,aux);
+      if(is_valid(aux))
+      {push(S,aux);}
       aux=next(adj);
     }
     free(n);
