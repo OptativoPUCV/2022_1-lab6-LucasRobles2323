@@ -122,6 +122,8 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
+  if (!is_valid(n)){return 0;}
+  
   printf("\n\n\n");
   for (size_t i = 0; i < 9; i++){
     printf("\n");
