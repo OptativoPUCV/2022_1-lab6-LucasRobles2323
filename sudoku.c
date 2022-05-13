@@ -122,8 +122,6 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-  if (!is_valid(n)){return 0;}
-  
   for (size_t i = 0; i < 9; i++){
     for (size_t j = 0; j < 9; j++){
       if (n->sudo[i][j] == 0){return 0;}
@@ -138,7 +136,7 @@ Node* DFS(Node* initial, int* cont){
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
 
-    if (is_final(n)){
+    if (is_final(n) && is_valid(n)){
       for (size_t i = 0; i < 9; i++)
       {
         for (size_t j = 0; j < 9; j++)

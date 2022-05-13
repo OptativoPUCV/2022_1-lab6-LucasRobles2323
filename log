@@ -201,3 +201,9 @@ Thu May 12 20:41:12 HSP 2022:
  tests:  7|2
 total_score: 50/70
 f13f608
+Thu May 12 20:43:07 HSP 2022: 
+ sudoku.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+ tests:  8|1
+total_score: 60/70
+71bd26f
