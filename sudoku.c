@@ -134,7 +134,7 @@ Node* DFS(Node* initial, int* cont){
   push(S,initial);
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
-    //if (!is_valid(n))continue;
+    if (!is_valid(n))continue;
     if (is_final(n)) return n;
     
 
@@ -142,9 +142,8 @@ Node* DFS(Node* initial, int* cont){
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
-      //if(is_valid(aux))
-      //{push(S,aux);}
-      push(S,aux);
+      if(is_valid(aux))
+      {push(S,aux);}
       aux=next(adj);
     }
     free(n);
