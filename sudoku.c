@@ -125,9 +125,7 @@ int is_final(Node* n){
   if (!is_valid(n)){return 0;}
   
   for (size_t i = 0; i < 9; i++){
-    printf("\n");
     for (size_t j = 0; j < 9; j++){
-      printf("%d ", n->sudo[i][j]);
       if (n->sudo[i][j] == 0){return 0;}
     }  
   }
