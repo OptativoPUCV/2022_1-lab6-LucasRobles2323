@@ -46,6 +46,9 @@ void print_node(Node* n){
 int is_valid(Node* n){
   int *vectorNum = (int*)calloc(10, sizeof(int));
 
+  print_node(n);
+  
+  
   // Comprobar filas
   for(size_t i = 0; i < 9; i++)
   {
@@ -135,7 +138,6 @@ Node* DFS(Node* initial, int* cont){
   push(S,initial);
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
-
     if (!is_valid(n))continue;
     if (is_final(n)) return n;
     
