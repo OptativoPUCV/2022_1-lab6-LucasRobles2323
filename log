@@ -213,3 +213,14 @@ Thu May 12 20:45:08 HSP 2022:
  tests:  8|1
 total_score: 60/70
 94c5cd8
+Thu May 12 20:58:56 HSP 2022: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:135:9: error: unused variable 'visited' [-Werror=unused-variable]
+   List* visited = createList();
+         ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+7545d5d

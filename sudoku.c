@@ -131,15 +131,16 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  Stack* S=createStack();
+  Stack* S = createStack();
+  List* visited = createList();
   push(S,initial);
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
 
-    if (is_final(n) && is_valid(n)){
-      return n;
-    }
+    if (!is_valid(n))continue;
+    if (is_final(n)) return n;
     
+
     //visitar nodo
     List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
