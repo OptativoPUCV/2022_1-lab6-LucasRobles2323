@@ -137,7 +137,7 @@ Node* DFS(Node* initial, int* cont){
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
 
-    if (!is_valid(n) && n->sudo[0][2] != 0)continue;
+    if (!is_valid(n) && n->sudo[0][2] == 1)continue;
     if (is_final(n)) return n;
     
 
