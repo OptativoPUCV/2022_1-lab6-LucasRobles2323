@@ -138,7 +138,18 @@ Node* DFS(Node* initial, int* cont){
   while (get_size(S) != 0){
     Node* n = top(S); pop(S);
 
-    if (is_final(n) == 1){return n;}
+    if (is_final(n)){
+      for (size_t i = 0; i < 9; i++)
+      {
+        for (size_t j = 0; j < 9; j++)
+        {
+          printf("%d ", n->sudo[i][j]);
+        }
+        printf("\n");
+      }
+      printf("\n");
+      return n;
+    }
     
 
     //visitar nodo
